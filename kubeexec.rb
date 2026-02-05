@@ -5,24 +5,30 @@
 class Kubeexec < Formula
   desc "FZF-based kubectl exec into pods"
   homepage "https://github.com/estebanmilaho/kubeexec"
-  version "0.0.9"
+  version "0.0.10"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.9/kubeexec_0.0.9_darwin_amd64.tar.gz"
-      sha256 "989d721448942b8fe9e73ffe4db6f5867cdfd1578ae550f18cd64b145f48f4db"
+      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.10/kubeexec_0.0.10_darwin_amd64.tar.gz"
+      sha256 "8cc682320b2ad3599ce46c796b8f9bde5242d067d80a1b8a206d23dae67f8547"
 
       def install
         bin.install "kubeexec"
+        bash_completion.install "completion/kubeexec.bash" => "kubeexec"
+        zsh_completion.install "completion/_kubeexec"
+        fish_completion.install "completion/kubeexec.fish"
       end
     end
     on_arm do
-      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.9/kubeexec_0.0.9_darwin_arm64.tar.gz"
-      sha256 "b2f0f14d1ce1dd6fdbddaa5f71ad81cecde485b1c42532708b33f89beafc5476"
+      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.10/kubeexec_0.0.10_darwin_arm64.tar.gz"
+      sha256 "310b97aa18a5e6a23260c81299091a092659e236eb97d3bfbdda2f186763dcf7"
 
       def install
         bin.install "kubeexec"
+        bash_completion.install "completion/kubeexec.bash" => "kubeexec"
+        zsh_completion.install "completion/_kubeexec"
+        fish_completion.install "completion/kubeexec.fish"
       end
     end
   end
@@ -30,21 +36,27 @@ class Kubeexec < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.9/kubeexec_0.0.9_linux_amd64.tar.gz"
-        sha256 "a140bce368744308e76a9464256425d971690af9464aee26f437a6de6e4bf0f3"
+        url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.10/kubeexec_0.0.10_linux_amd64.tar.gz"
+        sha256 "b2201334c60ac341efe3198f0adad0e47414cee98fb4a2bf244ea7ee568d84a0"
 
         def install
           bin.install "kubeexec"
+          bash_completion.install "completion/kubeexec.bash" => "kubeexec"
+          zsh_completion.install "completion/_kubeexec"
+          fish_completion.install "completion/kubeexec.fish"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.9/kubeexec_0.0.9_linux_arm64.tar.gz"
-        sha256 "0f1075cccf130f0227fc5f2c1430c4b8c279a5a7fd2916b0f806b288d45afa9a"
+        url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.10/kubeexec_0.0.10_linux_arm64.tar.gz"
+        sha256 "ac3b1a07772b11820e44207ff1b9d644666ffb63b721efa9af96cd41dedce929"
 
         def install
           bin.install "kubeexec"
+          bash_completion.install "completion/kubeexec.bash" => "kubeexec"
+          zsh_completion.install "completion/_kubeexec"
+          fish_completion.install "completion/kubeexec.fish"
         end
       end
     end
