@@ -5,13 +5,13 @@
 class Kubeexec < Formula
   desc "FZF-based kubectl exec into pods"
   homepage "https://github.com/estebanmilaho/kubeexec"
-  version "0.0.21"
+  version "0.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.21/kubeexec_v0.0.21_darwin_amd64.tar.gz"
-      sha256 "a3899b78ee304c90a244fb5eccf6a5d3c1fa2e9c7334278c8db09f835f3ce677"
+      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.1.0/kubeexec_v0.1.0_darwin_amd64.tar.gz"
+      sha256 "76a0737302d3b5472f9751f21158c86507dd16cf8c21628e864c9619ce0dc569"
 
       def install
         bin.install "kubeexec"
@@ -21,8 +21,8 @@ class Kubeexec < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.21/kubeexec_v0.0.21_darwin_arm64.tar.gz"
-      sha256 "2300118dcca03d8b2b9de9f52c1fa93493ca4b5e05f9b1a90800ae4ded357283"
+      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.1.0/kubeexec_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "ac69b14016c943c89e61ff468261be88464526de4d33ec898f56eef374c0befd"
 
       def install
         bin.install "kubeexec"
@@ -35,8 +35,8 @@ class Kubeexec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.21/kubeexec_v0.0.21_linux_amd64.tar.gz"
-      sha256 "a9388c99cc79ba4f480bc5b1b23ada2afd6fe74f1973b442304e04885be58f26"
+      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.1.0/kubeexec_v0.1.0_linux_amd64.tar.gz"
+      sha256 "b1964b247669a439a50492d76e1fa8fd1a09cf092e0effaaf0f66ea491b302dd"
       def install
         bin.install "kubeexec"
         bash_completion.install "completion/kubeexec.bash" => "kubeexec"
@@ -45,8 +45,8 @@ class Kubeexec < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.0.21/kubeexec_v0.0.21_linux_arm64.tar.gz"
-      sha256 "8f92a3cf3a890e0b40546d2a5001a537c5c3ef047444c42e3a81eea32f00d488"
+      url "https://github.com/estebanmilaho/kubeexec/releases/download/v0.1.0/kubeexec_v0.1.0_linux_arm64.tar.gz"
+      sha256 "9fd02583309acdbf65c137350679ccfea6320d77b420999f008f098c45f750a1"
       def install
         bin.install "kubeexec"
         bash_completion.install "completion/kubeexec.bash" => "kubeexec"
